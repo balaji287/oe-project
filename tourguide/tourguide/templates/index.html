@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Multilingual Tour Guide</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<header class="hero"><h1>🌏 Your Personal AI Tour Guide</h1><p>Stories about history, told your way — in your language, for your age, within your time.</p></header>
+<main>
+<section class="card"><h2>1 · Visitor Dashboard</h2>
+<form id="prefs" novalidate>
+ <div class="row"><label>Name<input id="name" maxlength="50" required></label>
+ <label>Age group<select id="age"><option value="child">Child (under 12)</option><option value="teen">Teen (13-19)</option><option value="adult" selected>Adult (20-59)</option><option value="senior">Senior (60+)</option><option value="enthusiast">History enthusiast</option></select></label></div>
+ <div class="row"><label>Language<select id="lang">{% for l in languages %}<option>{{ l }}</option>{% endfor %}</select></label>
+ <label>Time available (minutes)<input id="minutes" type="number" min="10" max="600" value="90"></label></div>
+ <fieldset><legend>Interests</legend>{% for i in interests %}<label class="chip"><input type="checkbox" value="{{ i }}"{{ ' checked' if i=='history' }}><span>{{ i|capitalize }}</span></label>{% endfor %}</fieldset>
+ <label>Destination<input id="dest" list="dl" placeholder="Type any place or pick a sample below" maxlength="100"></label><datalist id="dl"></datalist>
+ <div id="samples" class="samples"></div>
+ <div class="row"><button type="submit" id="go">✨ Generate my tour</button><button type="button" id="planBtn" class="alt">🗺️ Plan my day</button></div>
+ <p id="err" class="error" role="alert"></p>
+</form></section>
+<section id="planSec" class="card hidden"><h2>🗺️ Smart Tour Plan</h2><div id="plan"></div></section>
+<section id="tourSec" class="card hidden"><h2>📖 Your Tour: <span id="tourTitle"></span></h2><div id="tour" class="cards"></div></section>
+<section id="chatSec" class="card hidden"><h2>💬 Ask the Guide</h2><div id="log" class="log"></div>
+<form id="chatForm"><input id="msg" maxlength="600" placeholder="Ask a follow-up question…" autocomplete="off"><button>Send</button></form></section>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script></body></html>

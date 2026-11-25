@@ -1,0 +1,91 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "runs": 69,
+  "errors": 0,
+  "latency_mean_s": 4.48,
+  "latency_median_s": 4.52,
+  "all_five_sections_pct": 100.0,
+  "clean_end_pct": 92.8,
+  "mean_words_to_budget_ratio": 0.7,
+  "by_language_at_90min": {
+    "English": {
+      "n": 15,
+      "complete_pct": 100.0,
+      "clean_end_pct": 93.3,
+      "mean_words": 636.73,
+      "script_share": 1.0,
+      "mean_latency_s": 4.36
+    },
+    "Hindi": {
+      "n": 15,
+      "complete_pct": 100.0,
+      "clean_end_pct": 100.0,
+      "mean_words": 571.27,
+      "script_share": 0.96,
+      "mean_latency_s": 4.08
+    },
+    "Tamil": {
+      "n": 15,
+      "complete_pct": 100.0,
+      "clean_end_pct": 100.0,
+      "mean_words": 353.2,
+      "script_share": 0.96,
+      "mean_latency_s": 4.51
+    },
+    "Kannada": {
+      "n": 15,
+      "complete_pct": 100.0,
+      "clean_end_pct": 93.3,
+      "mean_words": 334.8,
+      "script_share": 0.97,
+      "mean_latency_s": 4.88
+    }
+  },
+  "by_age_group_at_90min": {
+    "child": {
+      "n": 12,
+      "mean_words": 362.67,
+      "mean_ratio": 0.5
+    },
+    "teen": {
+      "n": 12,
+      "mean_words": 488.67,
+      "mean_ratio": 0.68
+    },
+    "adult": {
+      "n": 12,
+      "mean_words": 508.83,
+      "mean_ratio": 0.71
+    },
+    "senior": {
+      "n": 12,
+      "mean_words": 495.58,
+      "mean_ratio": 0.69
+    },
+    "enthusiast": {
+      "n": 12,
+      "mean_words": 514.25,
+      "mean_ratio": 0.71
+    }
+  },
+  "by_time_budget_adult_english": {
+    "30": {
+      "n": 3,
+      "budget": 240,
+      "mean_words": 197,
+      "mean_ratio": 0.82
+    },
+    "90": {
+      "n": 3,
+      "budget": 720,
+      "mean_words": 753.67,
+      "mean_ratio": 1.05
+    },
+    "240": {
+      "n": 3,
+      "budget": 1200,
+      "mean_words": 1142,
+      "mean_ratio": 0.95
+    }
+  }
+}

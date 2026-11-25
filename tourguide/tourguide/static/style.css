@@ -1,0 +1,28 @@
+:root{--bg:#f4f1ea;--card:#fff;--ink:#222;--accent:#e07a2f;--accent2:#1f6f78}
+@media(prefers-color-scheme:dark){:root{--bg:#14181c;--card:#1e252b;--ink:#eee}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,'Noto Sans',sans-serif;background:var(--bg);color:var(--ink)}
+.hero{background:linear-gradient(135deg,#1f6f78,#e07a2f);color:#fff;text-align:center;padding:48px 16px}
+.hero h1{margin:0 0 8px;font-size:clamp(1.6rem,4vw,2.6rem)}
+main{max-width:900px;margin:-24px auto 40px;padding:0 14px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:18px;box-shadow:0 4px 18px #0002}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>label{flex:1;min-width:200px}
+label{display:block;font-weight:600;margin:8px 0}
+input,select{width:100%;padding:10px;border:1px solid #8886;border-radius:8px;font-size:1rem;background:transparent;color:inherit;margin-top:4px}
+select option{color:#222}
+fieldset{border:1px solid #8884;border-radius:10px;margin:10px 0}
+.chip{display:inline-block;margin:4px}.chip input{display:none}
+.chip span{display:inline-block;padding:6px 14px;border-radius:20px;border:1px solid var(--accent2);cursor:pointer;font-weight:500}
+.chip input:checked+span{background:var(--accent2);color:#fff}
+button{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-size:1rem;cursor:pointer;margin-top:8px}
+button.alt{background:var(--accent2)}button:disabled{opacity:.6}
+.samples{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:8px 0}
+.dest{border-radius:12px;padding:14px 10px;color:#222;cursor:pointer;min-height:96px;transition:transform .15s}
+.dest:hover{transform:translateY(-3px)}.dest b{display:block}.dest small{opacity:.8}.dest .e{font-size:1.8rem}
+.error{color:#d62828;min-height:1.2em}.hidden{display:none}
+.cards{display:grid;gap:12px}.tc{border-left:5px solid var(--accent);background:#8881;border-radius:10px;padding:12px 16px}
+.tc h3{margin:0 0 6px;color:var(--accent2)}.tc p{margin:6px 0;line-height:1.6;white-space:pre-wrap}
+.log{max-height:340px;overflow:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.b{padding:10px 14px;border-radius:14px;max-width:85%;white-space:pre-wrap;line-height:1.5}
+.b.user{align-self:flex-end;background:var(--accent2);color:#fff}.b.bot{align-self:flex-start;background:#8882}
+#chatForm{display:flex;gap:8px}#chatForm button{margin:0}
+.stop{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid #8883}
